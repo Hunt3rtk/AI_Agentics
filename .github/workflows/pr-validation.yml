@@ -1,0 +1,35 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  validate-pr-checklist:
+    name: Validate PR checklist and NASA rules
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR checklist
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const body = context.payload.pull_request && context.payload.pull_request.body || '';
+            const required = [
+              'I have added/updated unit tests and they pass locally.',
+              'I have run integration/E2E tests where applicable.',
+              'Linting and static analysis pass locally.',
+              'Security scans (dependency SCA / SAST) were run and any high/critical issues are addressed or documented.'
+            ];
+
+            const missing = [];
+            for (const line of required) {
+              // require a checked box with the line's text present after it
+              const pattern = `- [x] ${line}`;
+              if (!body.includes(pattern)) missing.push(line);
+            }
+
+            if (missing.length > 0) {
+              core.setFailed(`PR checklist incomplete. Missing checked items:\n- ${missing.join('\n- ')}`);
+            } else {
+              core.info('All required checklist items are present.');
+            }
