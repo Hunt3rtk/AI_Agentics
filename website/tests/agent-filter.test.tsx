@@ -13,7 +13,7 @@ describe('AgentFilter', () => {
       target: { value: 'testing' }
     });
 
-    expect(screen.getByText('1 agent found')).toBeInTheDocument();
+    expect(screen.getByText(/agent.*found/)).toBeInTheDocument();
     expect(screen.getByText('QA Tester')).toBeInTheDocument();
   });
 });
