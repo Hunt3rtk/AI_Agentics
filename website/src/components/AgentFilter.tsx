@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+﻿import { useMemo, useState } from 'react';
 import type { AgentRole } from '../data/agents';
 
 type Props = {
@@ -11,9 +11,14 @@ export default function AgentFilter({ agents }: Props) {
   const filtered = useMemo(() => {
     const lower = query.trim().toLowerCase();
     if (!lower) return agents;
+    const normalized = lower.endsWith('ing') ? lower.slice(0, -3) : lower;
     return agents.filter((agent) => {
-      const searchable = [agent.name, agent.tagline, ...agent.strengths, ...agent.responsibilities].join(' ').toLowerCase();
-      return searchable.includes(lower);
+      const searchable = [agent.name, agent.tagline, agent.mission, ...agent.strengths, ...agent.responsibilities, ...agent.interactions]
+        .join(' ')
+        .toLowerCase();
+      if (searchable.includes(lower) || (normalized && searchable.includes(normalized))) return true;
+      const tokens = searchable.split(/\W+/).filter(Boolean);
+      return tokens.some((t) => t.includes(lower) || t.includes(normalized) || lower.includes(t) || normalized.includes(t));
     });
   }, [agents, query]);
 
