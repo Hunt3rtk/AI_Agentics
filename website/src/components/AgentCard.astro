@@ -1,0 +1,25 @@
+---
+import type { AgentRole } from '../data/agents';
+
+interface Props {
+  agent: AgentRole;
+}
+
+const { agent } = Astro.props;
+---
+
+<article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-5 transition hover:-translate-y-0.5 hover:border-cyan-400/50 hover:bg-slate-900">
+  <h3 class="text-lg font-semibold text-white">{agent.name}</h3>
+  <p class="mt-2 text-sm text-slate-300">{agent.tagline}</p>
+  <ul class="mt-4 flex flex-wrap gap-2" aria-label={`${agent.name} strengths`}>
+    {agent.strengths.map((strength) => (
+      <li class="rounded-full border border-slate-700 px-2.5 py-1 text-xs text-cyan-200">{strength}</li>
+    ))}
+  </ul>
+  <a
+    href={`/agents/${agent.slug}`}
+    class="mt-5 inline-flex items-center rounded-md bg-cyan-400/20 px-3 py-1.5 text-sm font-medium text-cyan-200 transition hover:bg-cyan-300/30"
+  >
+    View details
+  </a>
+</article>

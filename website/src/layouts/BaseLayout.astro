@@ -1,0 +1,30 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Interactive guide to AI Agentics.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded-md focus:bg-cyan-300 focus:px-3 focus:py-2 focus:text-slate-900">Skip to content</a>
+    <SiteHeader />
+    <main id="content" class="container py-10 sm:py-14">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>
