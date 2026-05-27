@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # Coding Instruction: snake_case variable naming convention
 
 Scope:
@@ -22,7 +24,7 @@ Exceptions:
 - When a language's official style guide prescribes otherwise (e.g., Java, JavaScript for public API methods), follow that language's public API conventions; apply snake_case to internal/private identifiers where practical.
 
 How to apply in prompts to Copilot / agents:
-- "Use snake_case variable names for all variables and function parameters in this file. Convert any camelCase identifiers to snake_case." 
+- "Use snake_case variable names for all variables and function parameters in this file. Convert any camelCase identifiers to snake_case."
 - "Enforce lower_case_with_underscores for local variables; constants can be UPPER_SNAKE_CASE."
 
 Suggested enforcement checks (manual or CI):

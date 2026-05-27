@@ -5,7 +5,7 @@ argument-hint: The research question or topic (e.g., "collect benchmarks for DB 
 tools: ['read', 'search', 'web', 'runagent', 'manage_todo_list', 'Explore']
 ---
 
-<!-- Tip: Use /create-agent in chat to generate content with agent assistance -->
+<!-- markdownlint-disable MD013 -->
 
 ## Agent: Researcher
 
@@ -44,9 +44,12 @@ tools: ['read', 'search', 'web', 'runagent', 'manage_todo_list', 'Explore']
 - Optional: sentiment-summary with representative quotes and confidence scores.
 
 ### Example prompts
-- "Research DB options for our workload and summarize trade-offs between Postgres and CockroachDB." 
-- "Collect recent vulnerability reports for dependency X and recommend mitigation steps." 
-- "Summarize community sentiment about framework Y from GitHub issues and StackOverflow posts." 
+- "Research DB options for our workload and summarize trade-offs between
+  Postgres and CockroachDB."
+- "Collect recent vulnerability reports for dependency X and recommend
+  mitigation steps."
+- "Summarize community sentiment about framework Y from GitHub issues and
+  StackOverflow posts."
 
 ### Limits & ethics
 - Do not access private or paywalled resources unless the user supplies credentials.

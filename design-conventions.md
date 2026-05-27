@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # Design Conventions
 
 Purpose
@@ -20,7 +22,7 @@ Tokens & Variables
   - `--color-danger`: #e02424
 - Spacing scale (rem): 0.25, 0.5, 1, 1.5, 2, 3 (use named tokens `xs`, `sm`, `md`, `lg`, `xl`, `xxl`).
 - Type scale and font stack:
-  - Base font: system stack — `Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial`.
+  - Base font: system stack Ã¢â‚¬â€ `Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial`.
   - Sizes: `--font-size-base`: 16px, `--font-size-lg`: 20px, `--font-size-sm`: 14px.
 
 Layout & Breakpoints
@@ -30,7 +32,7 @@ Layout & Breakpoints
 
 Typography
 - Use semantic headings (`h1`..`h6`) and meaningful structure.
-- Line-height: 1.4–1.6 depending on font size.
+- Line-height: 1.4Ã¢â‚¬â€œ1.6 depending on font size.
 - Avoid decorative fonts for body copy; reserve for branding headings with fallbacks.
 
 Color & Contrast
@@ -59,7 +61,7 @@ JavaScript
 - When adding event listeners, clean up on destroy.
 
 Interaction & Motion
-- Use motion sparingly; prefer 150–300ms durations and `ease` easing.
+- Use motion sparingly; prefer 150Ã¢â‚¬â€œ300ms durations and `ease` easing.
 - Respect user `prefers-reduced-motion`.
 
 Images & Media
@@ -83,8 +85,6 @@ Acceptance Checklist (for generated components)
 - Focus styles visible.
 - Minimal and documented JS with no global leaks.
 
-
 Reference
 - WCAG 2.1 AA
 - MDN Web Docs (HTML/CSS/ARIA best practices)
-

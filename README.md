@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # AI Agentics
 
 Repository for custom Copilot agents, agent instructions, design conventions, and workflow enforcement files.

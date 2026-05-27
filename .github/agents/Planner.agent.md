@@ -6,6 +6,8 @@ tools: ['manage_todo_list', 'Explore', 'read', 'search', 'todo']
 # tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo'] # specify the tools this agent can use. If not set, all enabled tools are allowed.
 ---
 
+<!-- markdownlint-disable MD013 -->
+
 ## Agent: Planner
 
 **Summary:** This agent owns product-level planning and vision. It turns rough ideas into a clear product direction, user-facing scope, and implementation-ready handoff for the Orchestrator. It focuses on what the product should be, who it is for, how it should feel, and what success looks like.
