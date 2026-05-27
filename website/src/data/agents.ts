@@ -16,7 +16,7 @@ export const agents: AgentRole[] = [
     mission: 'Turn goals into clear execution plans and keep work moving with measurable checkpoints.',
     strengths: ['Task decomposition', 'Scope management', 'Cross-agent coordination'],
     responsibilities: [
-      'Break down user requests into testable tasks.',
+      'Break down user requests into verifiable tasks..',
       'Assign ownership and acceptance criteria.',
       'Track progress and escalate blockers quickly.'
     ],
