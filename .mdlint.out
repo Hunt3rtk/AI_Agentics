@@ -1,4 +1,0 @@
-markdownlint-cli2 v0.22.1 (markdownlint v0.40.0)
-Finding: **/*.md !node_modules
-Linting: 12 file(s)
-Summary: 456 error(s)
