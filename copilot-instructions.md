@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # Copilot Instructions — snake_case variable naming
 
 Purpose
@@ -28,7 +30,7 @@ Exceptions
 - Generated code, vendor libraries, and third-party modules: do not edit.
 
 Suggested prompts for users
-- "Use snake_case for all variable and parameter names in this file." 
+- "Use snake_case for all variable and parameter names in this file."
 - "Refactor local variables to snake_case within this function only; do not change public APIs."
 
 Enforcement suggestions

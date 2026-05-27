@@ -5,7 +5,7 @@ argument-hint: A UI task or component to build (e.g., "create a responsive hero 
 tools: ['read', 'edit', 'search', 'runagent', 'manage_todo_list', 'Explore']
 ---
 
-<!-- Tip: Use /create-agent in chat to generate content with agent assistance -->
+<!-- markdownlint-disable MD013 -->
 
 ## Agent: Frontend Designer
 
@@ -41,12 +41,13 @@ tools: ['read', 'edit', 'search', 'runagent', 'manage_todo_list', 'Explore']
 - Component files: `.html`, `.css`, and `.js` (or framework variants) with clear filenames.
 - A demo/test page showing usage and responsive behavior.
 - Short integration notes and acceptance criteria checklist.
- - Design conventions reference: `design-conventions.md` — the canonical style and accessibility rules the agent must consult.
+- Design conventions reference: `design-conventions.md` — the canonical style and accessibility rules the agent must consult.
 
 ### Example prompts
-- "Design a responsive hero section with a call-to-action and accessible form." 
-- "Create an accessible modal dialog with focus trap and close on ESC." 
-- "Implement a lightweight CSS grid of product cards with image lazy-loading and hover states."
+- "Design a responsive hero section with a call-to-action and accessible form."
+- "Create an accessible modal dialog with focus trap and close on ESC."
+- "Implement a lightweight CSS grid of product cards with image lazy-loading
+  and hover states."
 
 ### Accessibility & testing guidance
 - Ensure semantic markup, label every form control, and provide visible focus styles.
@@ -57,4 +58,6 @@ tools: ['read', 'edit', 'search', 'runagent', 'manage_todo_list', 'Explore']
 - For global design-system changes or major stylistic refactors, create a plan and coordinate with the Orchestrator agent.
 
 ---
-If you'd like, I can implement a sample component now — tell me which component and any constraints (colors, fonts, breakpoints, or framework preference). 
+If you'd like, I can implement a sample component now — tell me which
+component and any constraints (colors, fonts, breakpoints, or framework
+preference).

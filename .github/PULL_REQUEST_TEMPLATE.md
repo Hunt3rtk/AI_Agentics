@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 ## Summary
 
 Provide a concise summary of the change and its purpose.
@@ -30,7 +32,7 @@ Steps to reproduce and verify the change locally, including commands and test da
 ## NASA Rules Checklist (pick applied rules and explain)
 Please list which NASA 10 Coding Rules apply and how you addressed each. Example:
 - Rule 1 (Simplicity): "Used straightforward loop instead of nested comprehensions; added comment explaining intent."
-- Rule 4 (Defensive programming): "Added input validation and explicit error handling in `validate_user_input()`." 
+- Rule 4 (Defensive programming): "Added input validation and explicit error handling in `validate_user_input()`."
 
 ## Testing summary / Results
 - Unit tests: `pytest`/`npm test` output snippet or link to CI artifact
@@ -43,6 +45,10 @@ Please list which NASA 10 Coding Rules apply and how you addressed each. Example
 
 ## Reviewer notes
 - Anything special the reviewer should look for (race conditions, data model changes, security impacts).
+
+## Branch flow
+- Production changes should merge into `main` only after passing through `qa` for testing and verification.
+- Use `qa` for validation work, then open the production PR from `qa` into `main` when checks pass.
 
 ---
 By submitting this PR you confirm that you followed the project's contributing guidelines and the NASA coding rules where applicable. Include short notes about which rules were enforced and how in the NASA Rules Checklist above.
