@@ -44,5 +44,9 @@ Please list which NASA 10 Coding Rules apply and how you addressed each. Example
 ## Reviewer notes
 - Anything special the reviewer should look for (race conditions, data model changes, security impacts).
 
+## Branch flow
+- Production changes should merge into `main` only after passing through `qa` for testing and verification.
+- Use `qa` for validation work, then open the production PR from `qa` into `main` when checks pass.
+
 ---
 By submitting this PR you confirm that you followed the project's contributing guidelines and the NASA coding rules where applicable. Include short notes about which rules were enforced and how in the NASA Rules Checklist above.
