@@ -1,0 +1,14 @@
+---
+import { siteMeta } from '../lib/site';
+---
+
+<header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur">
+  <div class="container flex items-center justify-between py-4">
+    <a href="/" class="text-sm font-semibold tracking-wide text-slate-100">{siteMeta.name}</a>
+    <nav aria-label="Primary" class="flex gap-4 text-sm">
+      {siteMeta.nav.map((item) => (
+        <a href={item.href} class="rounded-md px-3 py-1.5 text-slate-300 transition hover:bg-slate-800 hover:text-white">{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
